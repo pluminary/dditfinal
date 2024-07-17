@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.groovit.groupware.mapper.SalaryMapper">
+	
+	<select id="list" parameterType="int" resultType="com.groovit.groupware.vo.SalaryVO">
+		SELECT SAL_NO, EMP_ID, SAL_YEAR, SAL_BSC, SAL_ALLOWANCE, 
+       	SAL_GIVE_DAY, SAL_PS, SAL_HT, SAL_EMP, SAL_TEX, SAL_AS, SAL_MONTH
+		FROM SALARY
+		WHERE SAL_NO = #{salNo}
+	</select>
+	
+</mapper>
